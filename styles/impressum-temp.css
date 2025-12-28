@@ -1,0 +1,46 @@
+/* Impressum section */
+.impressum-section {
+    background-color: white;
+    padding: 4rem 3rem;
+    margin-bottom: 0;
+    min-height: 60vh;
+}
+
+.impressum-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 32px;
+}
+
+.impressum-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.impressum-content h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: #2c3e50;
+}
+
+.impressum-content h3:first-of-type {
+    margin-top: 0;
+}
+
+.impressum-content p {
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.impressum-content a {
+    color: rgb(98, 125, 239);
+    text-decoration: none;
+}
+
+.impressum-content a:hover {
+    text-decoration: underline;
+}

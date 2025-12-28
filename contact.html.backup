@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact • Autohaus Dimmler</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <div class="logo-placeholder">
+                    <img src="assets/logo.png" alt="Autohaus Dimmler Logo" class="logo" />
+                </div>
+                <h1>Autohaus Dimmler</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="team-section" style="max-width:900px;margin:0 auto;">
+            <h2>Contact</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
+                <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,0.08);">
+                    <h3 style="margin:0 0 0.5rem;color:#2c3e50;">Get in touch</h3>
+                    <p style="color:#666;">We’re happy to answer your questions about vehicles, services, and appointments.</p>
+                    <p><strong>Phone:</strong> <a href="tel:+49123456789" class="button secondary" style="padding:0.4rem 0.8rem;">+49 123 456789</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@autohaus-dimmler.de" class="button secondary" style="padding:0.4rem 0.8rem;">info@autohaus-dimmler.de</a></p>
+                    <p><strong>Address:</strong><br/>Musterstraße 1<br/>12345 Musterstadt</p>
+                    <p><strong>Opening hours:</strong><br/>Mon–Fri: 08:00–18:00<br/>Sat: 09:00–13:00</p>
+                </div>
+
+                <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,0.08);">
+                    <h3 style="margin:0 0 0.5rem;color:#2c3e50;">Send a message</h3>
+                    <form action="mailto:info@autohaus-dimmler.de" method="post" enctype="text/plain">
+                        <div style="display:grid;gap:0.75rem;">
+                            <label>
+                                Name
+                                <input type="text" name="name" required style="width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;outline:none;" />
+                            </label>
+                            <label>
+                                Email
+                                <input type="email" name="email" required style="width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;outline:none;" />
+                            </label>
+                            <label>
+                                Subject
+                                <input type="text" name="subject" style="width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;outline:none;" />
+                            </label>
+                            <label>
+                                Message
+                                <textarea name="message" rows="5" required style="width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;outline:none;"></textarea>
+                            </label>
+                            <div style="display:flex;gap:0.75rem;">
+                                <button type="submit" class="button primary">Send</button>
+                                <button type="reset" class="button secondary">Reset</button>
+                            </div>
+                            <small style="color:#7f8c8d;">Submitting uses your default mail app (no data stored on this site).</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team-section" style="max-width:1200px;margin:2rem auto 0;">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-row top-row">
+                    <!-- Top row with 2 team members -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/Frank.jpg" alt="Frank Dimmler">
+                        </div>
+                        <div class="member-info">
+                            <h3>Frank Dimmler</h3>
+                            <p class="position">Position</p>
+                            <p class="email">email@example.com</p>
+                            <p class="phone">+49 123 456789</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/Katy.jpg" alt="Katy Dimmler-Preller">
+                        </div>
+                        <div class="member-info">
+                            <h3>Katy Dimmler-Preller</h3>
+                            <p class="position">Position</p>
+                            <p class="email">email@example.com</p>
+                            <p class="phone">+49 123 456789</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-row bottom-row">
+                    <!-- Bottom row with 3 team members -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/Anja.jpg" alt="Anja Müller">
+                        </div>
+                        <div class="member-info">
+                            <h3>Anja Müller</h3>
+                            <p class="position">Position</p>
+                            <p class="email">email@example.com</p>
+                            <p class="phone">+49 123 456789</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/Ulf.jpg" alt="Ulf">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ulf</h3>
+                            <p class="position">Position</p>
+                            <p class="email">email@example.com</p>
+                            <p class="phone">+49 123 456789</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/Maiia.jpg" alt="Maiia">
+                        </div>
+                        <div class="member-info">
+                            <h3>Maiia</h3>
+                            <p class="position">Position</p>
+                            <p class="email">email@example.com</p>
+                            <p class="phone">+49 123 456789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Johannes Großmann. All rights reserved.</p>
+    </footer>
+</body>
+</html>
