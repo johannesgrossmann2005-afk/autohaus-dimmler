@@ -161,6 +161,25 @@ nav a.active {
     font-weight: 600;
 }
 
+.nav-alert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.nav-badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: #d64545;
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    box-shadow: 0 2px 8px rgba(214, 69, 69, 0.35);
+}
+
 /* nav underline animation */
 nav a::after {
     content: "";
@@ -208,11 +227,14 @@ main {
 }
 
 .seasonal-notice {
-    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    border-top: 1px solid #4d67d3;
-    border-bottom: 1px solid #4d67d3;
+    background: linear-gradient(90deg, #c62828 0%, #b71c1c 100%);
+    border-top: 1px solid #8e1515;
+    border-bottom: 1px solid #8e1515;
     padding: 0.95rem 3rem;
     position: relative;
+    position: sticky;
+    top: 112px;
+    z-index: 900;
 }
 
 .seasonal-notice::after {
@@ -255,6 +277,7 @@ main {
     line-height: 1;
     opacity: 0.92;
     pointer-events: none;
+    animation: pulse-alert 1.8s ease-in-out infinite;
 }
 
 .seasonal-notice p::before {
@@ -263,6 +286,7 @@ main {
 
 .seasonal-notice p::after {
     right: 0.25rem;
+    animation-delay: 0.2s;
 }
 
 .seasonal-notice strong {
@@ -285,9 +309,33 @@ main {
 
 .seasonal-notice .notice-button:hover {
     background-color: #ffffff;
-    color: var(--color-primary);
+    color: #c62828;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse-alert {
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.85;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.12);
+        opacity: 1;
+    }
+}
+
+.hero-alert {
+    display: inline-block;
+    margin: 0.35rem auto 1rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
 }
 
 section {
@@ -615,20 +663,20 @@ h2 {
     margin-top: 1.25rem;
     padding: 1rem 1.1rem;
     border-radius: 10px;
-    background: #eef2ff;
-    border: 1px solid #c8d3ff;
-    box-shadow: 0 2px 10px rgba(95, 121, 229, 0.12);
+    background: #fff1f1;
+    border: 1px solid #f0b3b3;
+    box-shadow: 0 2px 10px rgba(183, 28, 28, 0.16);
 }
 
 .seasonal-hours h4 {
     margin: 0 0 0.6rem;
-    color: var(--color-primary-dark);
+    color: #a01818;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.05rem;
 }
 
 .seasonal-hours p {
-    color: var(--color-text-secondary);
+    color: #4f2b2b;
     margin-bottom: 0.55rem;
 }
 
@@ -966,6 +1014,7 @@ h2 {
 
     .seasonal-notice {
         padding: 0.85rem 1.1rem;
+        top: 88px;
     }
 
     .seasonal-notice p {
@@ -985,6 +1034,20 @@ h2 {
 
     .seasonal-notice .notice-button {
         margin: 0.2rem auto 0;
+    }
+
+    .nav-alert-link {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-badge {
+        font-size: 0.62rem;
+    }
+
+    .hero-alert {
+        margin-bottom: 0.8rem;
+        font-size: 0.88rem;
     }
 
     #sommer-oeffnungszeiten {
@@ -1150,4 +1213,11 @@ footer {
     background-color: var(--color-primary-dark);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(95, 121, 229, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .seasonal-notice p::before,
+    .seasonal-notice p::after {
+        animation: none;
+    }
 }
