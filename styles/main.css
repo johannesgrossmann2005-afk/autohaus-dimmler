@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-primary: #5f79e5;
+    --color-primary-dark: #4762cf;
+    --color-text-main: #243142;
+    --color-text-secondary: #4b5563;
+    --color-surface-soft: #f3f5f9;
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -17,13 +25,13 @@ body.resizing * {
 
 /* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--color-text-main);
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    font-size: 20px;
+    background-color: var(--color-surface-soft);
+    font-size: 18px;
 }
 
 /* Header styles */
@@ -103,7 +111,7 @@ header h1 {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: rgb(98, 125, 239);
+    background-color: var(--color-primary);
     margin: 3px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
@@ -145,11 +153,11 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
 }
 
 nav a.active {
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     font-weight: 600;
 }
 
@@ -161,7 +169,7 @@ nav a::after {
     right: 1rem;
     bottom: 0.15rem;
     height: 2px;
-    background: rgb(98, 125, 239);
+    background: var(--color-primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease;
@@ -199,6 +207,89 @@ main {
     background-color: white;
 }
 
+.seasonal-notice {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-top: 1px solid #4d67d3;
+    border-bottom: 1px solid #4d67d3;
+    padding: 0.95rem 3rem;
+    position: relative;
+}
+
+.seasonal-notice::after {
+    content: "";
+    display: block;
+    height: 14px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    z-index: 1;
+}
+
+.seasonal-notice p {
+    margin: 0 auto;
+    max-width: 1200px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    line-height: 1.45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 3rem;
+    text-align: center;
+}
+
+.seasonal-notice p::before,
+.seasonal-notice p::after {
+    content: "!";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.92;
+    pointer-events: none;
+}
+
+.seasonal-notice p::before {
+    left: 0.25rem;
+}
+
+.seasonal-notice p::after {
+    right: 0.25rem;
+}
+
+.seasonal-notice strong {
+    color: #ffffff;
+}
+
+.seasonal-notice .notice-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 24px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.seasonal-notice .notice-button:hover {
+    background-color: #ffffff;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
 section {
     margin-bottom: 0;
     padding: 4rem 3rem;
@@ -209,8 +300,8 @@ section {
     text-align: center;
     position: relative;
     padding: 5rem 3rem;
-    background: linear-gradient(135deg, rgb(98, 125, 239) 0%, rgb(78, 105, 219) 100%);
-    box-shadow: 0 4px 20px rgba(98, 125, 239, 0.2);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    box-shadow: 0 4px 20px rgba(95, 121, 229, 0.24);
 }
 
 .welcome-text {
@@ -268,7 +359,7 @@ section {
 
 .button.primary {
     background-color: white;
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -287,7 +378,7 @@ section {
 
 .button.secondary:hover {
     background-color: white;
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
@@ -343,7 +434,7 @@ h2 {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    color: #4b5563;
+    color: var(--color-text-secondary);
     font-size: 20px;
 }
 
@@ -455,24 +546,24 @@ h2 {
 .member-info .phone a {
     display: inline-block;
     padding: 0.4rem 0.8rem;
-    background-color: rgb(98, 125, 239);
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 15px;
     font-size: 0.85rem;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(98, 125, 239, 0.3);
+    box-shadow: 0 2px 6px rgba(95, 121, 229, 0.3);
 }
 
 .member-info .email a:hover,
 .member-info .phone a:hover {
-    background-color: rgb(78, 105, 219);
+    background-color: var(--color-primary-dark);
     transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(98, 125, 239, 0.4);
+    box-shadow: 0 3px 8px rgba(95, 121, 229, 0.4);
 }
 
 .member-info .position {
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     font-weight: 600;
     margin-bottom: 0.8rem;
 }
@@ -520,6 +611,35 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
+.seasonal-hours {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    background: #eef2ff;
+    border: 1px solid #c8d3ff;
+    box-shadow: 0 2px 10px rgba(95, 121, 229, 0.12);
+}
+
+.seasonal-hours h4 {
+    margin: 0 0 0.6rem;
+    color: var(--color-primary-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+}
+
+.seasonal-hours p {
+    color: var(--color-text-secondary);
+    margin-bottom: 0.55rem;
+}
+
+.seasonal-hours p:last-child {
+    margin-bottom: 0;
+}
+
+#sommer-oeffnungszeiten {
+    scroll-margin-top: 120px;
+}
+
 /* Open/Closed status badge */
 
 /* Map section */
@@ -565,13 +685,13 @@ h2 {
 }
 
 .map-fallback a {
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
 }
 
 .map-fallback a:hover {
-    color: rgb(78, 105, 219);
+    color: var(--color-primary-dark);
     text-decoration: underline;
 }
 
@@ -724,7 +844,7 @@ h2 {
 }
 
 .impressum-content a {
-    color: rgb(98, 125, 239);
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -768,6 +888,7 @@ h2 {
 /* Mobile styles */
 @media (max-width: 768px) {
     body {
+        font-size: 17px;
         padding: 0;
     }
 
@@ -841,6 +962,33 @@ h2 {
 
     section {
         padding: 3rem 1.5rem;
+    }
+
+    .seasonal-notice {
+        padding: 0.85rem 1.1rem;
+    }
+
+    .seasonal-notice p {
+        font-size: 0.95rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.45rem;
+        padding: 0 2rem;
+    }
+
+    .seasonal-notice p::before,
+    .seasonal-notice p::after {
+        font-size: 3rem;
+    }
+
+    .seasonal-notice .notice-button {
+        margin: 0.2rem auto 0;
+    }
+
+    #sommer-oeffnungszeiten {
+        scroll-margin-top: 100px;
     }
 
     .welcome-section {
@@ -965,19 +1113,19 @@ footer {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: rgb(98, 125, 239);
+    background: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(98, 125, 239, 0.3);
+    box-shadow: 0 4px 12px rgba(95, 121, 229, 0.3);
 }
 
 .social-link:hover {
-    background: rgb(78, 105, 219);
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(98, 125, 239, 0.4);
+    box-shadow: 0 6px 16px rgba(95, 121, 229, 0.4);
 }
 
 .social-link svg {
@@ -988,18 +1136,18 @@ footer {
 .contact-button {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: rgb(98, 125, 239);
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 20px;
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(98, 125, 239, 0.3);
+    box-shadow: 0 2px 8px rgba(95, 121, 229, 0.3);
 }
 
 .contact-button:hover {
-    background-color: rgb(78, 105, 219);
+    background-color: var(--color-primary-dark);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(98, 125, 239, 0.4);
+    box-shadow: 0 4px 12px rgba(95, 121, 229, 0.4);
 }
