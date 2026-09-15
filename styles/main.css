@@ -486,6 +486,46 @@ h2 {
     font-size: 20px;
 }
 
+/* Regional engagement section */
+.engagement-section {
+    background-color: #f9fafb;
+    padding: 4rem 3rem;
+}
+
+.engagement-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.engagement-image-wrapper {
+    flex: 0 1 480px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.engagement-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.engagement-text {
+    flex: 1;
+}
+
+.engagement-text h2 {
+    margin-bottom: 0.75rem;
+}
+
+.engagement-text p {
+    color: var(--color-text-secondary);
+    font-size: 20px;
+}
+
 /* Team section styles */
 .team-section {
     background-color: #f9fafb;
@@ -1111,6 +1151,30 @@ h2 {
     }
 
     .partner-text p {
+        font-size: 1rem;
+    }
+
+    .engagement-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .engagement-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .engagement-image-wrapper {
+        flex-basis: auto;
+        width: min(100%, 480px);
+        margin: 0 auto;
+    }
+
+    .engagement-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .engagement-text p {
         font-size: 1rem;
     }
 
